@@ -223,7 +223,29 @@
                 
     </section>
 
+          
                 <!-- =============== БЛОК-РАЗДЕЛИТЕЛЬ С КНОПКОЙ =============== -->
+<section class="section-divider">
+    <div class="divider-container">
+        <div class="divider-content">
+            <span class="divider-subtitle">Футбольный лагерь в Сириусе</span>
+            <h2 class="divider-title">Готов начать тренировки?</h2>
+            <p class="divider-text">Запишитесь на пробную тренировку прямо сейчас</p>
+            
+            <div class="divider-actions">
+                <a href="tel:+79939502905" class="divider-btn divider-btn-primary">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>8 993 950 29 05</span>
+                </a>
+                <a href="#booking" class="divider-btn divider-btn-secondary">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Записаться</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+                
 <!-- =============== РАЗДЕЛИТЕЛЬ "ПРИЗЫВ К ДЕЙСТВИЮ" =============== -->
 <section class="cta-divider">
     <div class="cta-container">
@@ -290,6 +312,66 @@
     </div>
 </section>
 
+                <!-- ===============HTML УНИВЕРСАЛЬНЫЙ РАЗДЕЛИТЕЛЬ =============== -->
+<section class="universal-divider" style="
+    --divider-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --divider-btn-bg: white;
+    --divider-btn-color: #667eea;
+    --divider-btn-hover-bg: #f1f1f1;
+    --divider-title-color: white;
+    --divider-text-color: rgba(255,255,255,0.9);
+">
+    <div class="universal-container">
+        <div class="universal-grid">
+            <div class="universal-left">
+                <h2 class="universal-title">
+                    <span class="universal-icon">
+                        <i class="fas fa-futbol"></i>
+                    </span>
+                    Футбо-Кэмп в Сириусе
+                </h2>
+                <p class="universal-description">
+                    Профессиональные футбольные сборы для детей 7-15 лет. 
+                    Тренировки по методикам ведущих академий мира.
+                </p>
+            </div>
+            
+            <div class="universal-right">
+                <div class="universal-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">лет опыта</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">выпускников</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">тренеров</span>
+                    </div>
+                </div>
+                
+                <div class="universal-buttons">
+                    <a href="tel:+79939502905" class="universal-btn universal-btn-primary">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>8 993 950 29 05</span>
+                    </a>
+                    
+                    <button class="universal-btn universal-btn-secondary" onclick="openBookingModal()">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Выбрать дату</span>
+                    </button>
+                </div>
+                
+                <div class="universal-tip">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Ответим на звонок за 30 секунд</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
                 
     <!-- Спортивный квартал -->
 <section class="sport-quarter" aria-labelledby="quarter-title">
@@ -1896,11 +1978,574 @@
         }
     }
 </style>
+<!-- ===============<style> УНИВЕРСАЛЬНЫЙ РАЗДЕЛИТЕЛЬ =============== -->
+<style>
+    .universal-divider {
+        background: var(--divider-bg);
+        padding: 70px 0;
+        margin: 50px 0;
+        border-radius: 30px;
+        position: relative;
+        isolation: isolate;
+    }
+
+    .universal-divider::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+        opacity: 0.4;
+        z-index: -1;
+    }
+
+    .universal-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .universal-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .universal-title {
+        font-size: 2.2rem;
+        color: var(--divider-title-color);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .universal-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 20px;
+        font-size: 1.8rem;
+        backdrop-filter: blur(5px);
+    }
+
+    .universal-description {
+        font-size: 1.2rem;
+        color: var(--divider-text-color);
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    .universal-stats {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        background: rgba(255,255,255,0.1);
+        padding: 20px;
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+        font-weight: 900;
+        color: white;
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.8);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .universal-buttons {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+    }
+
+    .universal-btn {
+        flex: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 25px;
+        border-radius: 15px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .universal-btn-primary {
+        background: var(--divider-btn-bg);
+        color: var(--divider-btn-color);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .universal-btn-primary:hover {
+        background: var(--divider-btn-hover-bg);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .universal-btn-secondary {
+        background: rgba(255,255,255,0.15);
+        color: white;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .universal-btn-secondary:hover {
+        background: rgba(255,255,255,0.25);
+        transform: translateY(-3px);
+    }
+
+    .universal-tip {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: rgba(255,255,255,0.7);
+        font-size: 0.95rem;
+        padding: 10px 15px;
+        background: rgba(0,0,0,0.1);
+        border-radius: 12px;
+    }
+
+    .universal-tip i {
+        color: #f1c40f;
+    }
+
+    @media (max-width: 992px) {
+        .universal-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .universal-title {
+            font-size: 1.8rem;
+        }
+
+        .universal-buttons {
+            flex-direction: column;
+        }
+
+        .universal-btn {
+            white-space: normal;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .universal-divider {
+            padding: 50px 0;
+            border-radius: 20px;
+        }
+
+        .universal-container {
+            padding: 0 20px;
+        }
+
+        .universal-stats {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stat-item {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+</style>
+
+    <!-- ===============<style> БЛОК-РАЗДЕЛИТЕЛЬ С КНОПКОЙ =============== -->
+
+<style>
+    .section-divider {
+        position: relative;
+        width: 100%;
+        padding: 80px 0;
+        margin: 40px 0;
+        background: linear-gradient(135deg, 
+            rgba(44, 62, 80, 0.95) 0%, 
+            rgba(52, 152, 219, 0.95) 100%),
+            url('https://images.unsplash.com/photo-1459865264687-595d652de67e?w=1200') center/cover fixed;
+        background-blend-mode: overlay;
+        color: white;
+        overflow: hidden;
+    }
+
+    .section-divider::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #f1c40f, #e67e22, #e74c3c, #9b59b6, #3498db);
+        z-index: 1;
+    }
+
+    .divider-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .divider-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .divider-subtitle {
+        display: inline-block;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+        color: #f1c40f;
+        font-weight: 600;
+        position: relative;
+    }
+
+    .divider-subtitle::before,
+    .divider-subtitle::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 2px;
+        background: #f1c40f;
+    }
+
+    .divider-subtitle::before {
+        left: -40px;
+    }
+
+    .divider-subtitle::after {
+        right: -40px;
+    }
+
+    .divider-title {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        font-weight: 800;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .divider-text {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        opacity: 0.9;
+        line-height: 1.6;
+    }
+
+    .divider-actions {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .divider-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 16px 32px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 2px solid transparent;
+        cursor: pointer;
+    }
+
+    .divider-btn-primary {
+        background: white;
+        color: #2c3e50;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .divider-btn-primary:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        background: #f1c40f;
+        color: #2c3e50;
+    }
+
+    .divider-btn-secondary {
+        background: transparent;
+        color: white;
+        border-color: white;
+        backdrop-filter: blur(5px);
+    }
+
+    .divider-btn-secondary:hover {
+        background: white;
+        color: #2c3e50;
+        transform: translateY(-5px);
+        border-color: transparent;
+    }
+
+    .divider-btn i {
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+        .section-divider {
+            padding: 60px 0;
+        }
+
+        .divider-title {
+            font-size: 2rem;
+        }
+
+        .divider-subtitle::before,
+        .divider-subtitle::after {
+            display: none;
+        }
+
+        .divider-actions {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .divider-btn {
+            padding: 14px 28px;
+        }
+    }
+</style>
+<!-- ===============<style> УНИВЕРСАЛЬНЫЙ РАЗДЕЛИТЕЛЬ =============== -->
+
+<style>
+    .universal-divider {
+        background: var(--divider-bg);
+        padding: 70px 0;
+        margin: 50px 0;
+        border-radius: 30px;
+        position: relative;
+        isolation: isolate;
+    }
+
+    .universal-divider::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+        opacity: 0.4;
+        z-index: -1;
+    }
+
+    .universal-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .universal-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .universal-title {
+        font-size: 2.2rem;
+        color: var(--divider-title-color);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .universal-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 20px;
+        font-size: 1.8rem;
+        backdrop-filter: blur(5px);
+    }
+
+    .universal-description {
+        font-size: 1.2rem;
+        color: var(--divider-text-color);
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    .universal-stats {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        background: rgba(255,255,255,0.1);
+        padding: 20px;
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+        font-weight: 900;
+        color: white;
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.8);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .universal-buttons {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+    }
+
+    .universal-btn {
+        flex: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 25px;
+        border-radius: 15px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .universal-btn-primary {
+        background: var(--divider-btn-bg);
+        color: var(--divider-btn-color);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .universal-btn-primary:hover {
+        background: var(--divider-btn-hover-bg);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .universal-btn-secondary {
+        background: rgba(255,255,255,0.15);
+        color: white;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .universal-btn-secondary:hover {
+        background: rgba(255,255,255,0.25);
+        transform: translateY(-3px);
+    }
+
+    .universal-tip {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: rgba(255,255,255,0.7);
+        font-size: 0.95rem;
+        padding: 10px 15px;
+        background: rgba(0,0,0,0.1);
+        border-radius: 12px;
+    }
+
+    .universal-tip i {
+        color: #f1c40f;
+    }
+
+    @media (max-width: 992px) {
+        .universal-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .universal-title {
+            font-size: 1.8rem;
+        }
+
+        .universal-buttons {
+            flex-direction: column;
+        }
+
+        .universal-btn {
+            white-space: normal;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .universal-divider {
+            padding: 50px 0;
+            border-radius: 20px;
+        }
+
+        .universal-container {
+            padding: 0 20px;
+        }
+
+        .universal-stats {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stat-item {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+</style>
 
     
 </body>
 
 </html>
+
 
 
 
