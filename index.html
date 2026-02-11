@@ -224,27 +224,26 @@
     </section>
 
                 <!-- =============== БЛОК-РАЗДЕЛИТЕЛЬ С КНОПКОЙ =============== -->
-<section class="section-divider">
-    <div class="divider-container">
-        <div class="divider-content">
-            <span class="divider-subtitle">Футбольный лагерь в Сириусе</span>
-            <h2 class="divider-title">Готов начать тренировки?</h2>
-            <p class="divider-text">Запишитесь на пробную тренировку прямо сейчас</p>
-            
-            <div class="divider-actions">
-                <a href="tel:+79939502905" class="divider-btn divider-btn-primary">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>8 993 950 29 05</span>
+<!-- =============== РАЗДЕЛИТЕЛЬ "ПРИЗЫВ К ДЕЙСТВИЮ" =============== -->
+<section class="cta-divider">
+    <div class="cta-container">
+        <div class="cta-wrapper">
+            <div class="cta-left">
+                <h3 class="cta-title">Есть вопросы по сборам?</h3>
+                <p class="cta-description">Наш менеджер подробно расскажет о программе и условиях</p>
+            </div>
+            <div class="cta-right">
+                <a href="tel:+79939502905" class="cta-button">
+                    <span class="cta-button-text">8 993 950 29 05</span>
+                    <span class="cta-button-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
                 </a>
-                <a href="#booking" class="divider-btn divider-btn-secondary">
-                    <i class="fas fa-calendar-check"></i>
-                    <span>Записаться</span>
-                </a>
+                <span class="cta-hint">Звонок бесплатный</span>
             </div>
         </div>
     </div>
 </section>
-
                 
     <!-- Спортивный квартал -->
 <section class="sport-quarter" aria-labelledby="quarter-title">
@@ -1517,162 +1516,118 @@
     <script src="js/script.js" defer></script>
 <!-- =============== СТИЛЬ для БЛОК-РАЗДЕЛИТЕЛЬ С КНОПКОЙ =============== -->
 <style>
-    .section-divider {
+    .cta-divider {
+        background: linear-gradient(120deg, #ffffff 0%, #f8f9fa 100%);
+        padding: 60px 0;
+        margin: 50px 0;
         position: relative;
-        width: 100%;
-        padding: 80px 0;
-        margin: 40px 0;
-        background: linear-gradient(135deg, 
-            rgba(44, 62, 80, 0.95) 0%, 
-            rgba(52, 152, 219, 0.95) 100%),
-            url('https://images.unsplash.com/photo-1459865264687-595d652de67e?w=1200') center/cover fixed;
-        background-blend-mode: overlay;
-        color: white;
-        overflow: hidden;
+        border-top: 1px solid #e9ecef;
+        border-bottom: 1px solid #e9ecef;
     }
 
-    .section-divider::before {
+    .cta-divider::after {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #f1c40f, #e67e22, #e74c3c, #9b59b6, #3498db);
-        z-index: 1;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 10px;
+        background: #3498db;
+        border-radius: 10px;
     }
 
-    .divider-container {
-        max-width: 1200px;
+    .cta-container {
+        max-width: 1100px;
         margin: 0 auto;
         padding: 0 20px;
-        position: relative;
-        z-index: 2;
     }
 
-    .divider-content {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .divider-subtitle {
-        display: inline-block;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 15px;
-        color: #f1c40f;
-        font-weight: 600;
-        position: relative;
-    }
-
-    .divider-subtitle::before,
-    .divider-subtitle::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        width: 30px;
-        height: 2px;
-        background: #f1c40f;
-    }
-
-    .divider-subtitle::before {
-        left: -40px;
-    }
-
-    .divider-subtitle::after {
-        right: -40px;
-    }
-
-    .divider-title {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        font-weight: 800;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-
-    .divider-text {
-        font-size: 1.2rem;
-        margin-bottom: 40px;
-        opacity: 0.9;
-        line-height: 1.6;
-    }
-
-    .divider-actions {
+    .cta-wrapper {
         display: flex;
-        gap: 20px;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
         flex-wrap: wrap;
     }
 
-    .divider-btn {
+    .cta-left {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .cta-description {
+        font-size: 1.1rem;
+        color: #6c757d;
+        margin: 0;
+    }
+
+    .cta-right {
+        text-align: center;
+    }
+
+    .cta-button {
         display: inline-flex;
         align-items: center;
-        justify-content: center;
-        gap: 12px;
-        padding: 16px 32px;
-        border-radius: 50px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        border: 2px solid transparent;
-        cursor: pointer;
-    }
-
-    .divider-btn-primary {
-        background: white;
-        color: #2c3e50;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-
-    .divider-btn-primary:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-        background: #f1c40f;
-        color: #2c3e50;
-    }
-
-    .divider-btn-secondary {
-        background: transparent;
+        background: #2c3e50;
         color: white;
-        border-color: white;
-        backdrop-filter: blur(5px);
+        padding: 5px;
+        padding-right: 30px;
+        padding-left: 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(44, 62, 80, 0.2);
     }
 
-    .divider-btn-secondary:hover {
-        background: white;
-        color: #2c3e50;
-        transform: translateY(-5px);
-        border-color: transparent;
+    .cta-button:hover {
+        background: #3498db;
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(52, 152, 219, 0.3);
     }
 
-    .divider-btn i {
-        font-size: 1.2rem;
+    .cta-button-icon {
+        background: rgba(255,255,255,0.2);
+        padding: 10px;
+        border-radius: 50%;
+        margin-left: 15px;
+        transition: all 0.3s;
+    }
+
+    .cta-button:hover .cta-button-icon {
+        background: rgba(255,255,255,0.3);
+        transform: translateX(5px);
+    }
+
+    .cta-hint {
+        display: block;
+        margin-top: 10px;
+        color: #95a5a6;
+        font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
-        .section-divider {
-            padding: 60px 0;
-        }
-
-        .divider-title {
-            font-size: 2rem;
-        }
-
-        .divider-subtitle::before,
-        .divider-subtitle::after {
-            display: none;
-        }
-
-        .divider-actions {
+        .cta-wrapper {
             flex-direction: column;
-            align-items: stretch;
+            text-align: center;
         }
 
-        .divider-btn {
-            padding: 14px 28px;
+        .cta-title {
+            font-size: 1.5rem;
+        }
+
+        .cta-button {
+            font-size: 1.2rem;
+            padding: 5px 20px;
         }
     }
 </style>
@@ -1680,6 +1635,7 @@
 </body>
 
 </html>
+
 
 
 
