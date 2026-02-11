@@ -372,7 +372,34 @@
         </div>
     </div>
 </section>
+       <!-- =============== БЛОК С ВИДЕО ============= -->
+<section class="video-section">
+    <div class="container">
+        <div class="video-wrapper">
+            <h2 class="video-headline">⚽ Футбольный лагерь в действии</h2>
+            
+            <div class="video-player">
+                <video id="campVideo" controls poster="/images/video-preview.jpg" width="100%">
+                    <source src="/videos/football-camp.mp4" type="video/mp4">
+                    <p>Ваш браузер не поддерживает видео. Скачайте видео <a href="/videos/football-camp.mp4">по ссылке</a>.</p>
+                </video>
+            </div>
+            
+            <div class="video-description">
+                <h3>Профессиональные тренировки в Сириусе</h3>
+                <p>3 тренировки в день, работа с мячом, тактика, физическая подготовка</p>
                 
+                <div class="video-phone">
+                    <a href="tel:+79939502905" class="video-phone-btn">
+                        <i class="fas fa-phone-alt"></i> 8 993 950 29 05
+                    </a>
+                    <span class="phone-hint">Запись на пробную тренировку</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+         
     <!-- Спортивный квартал -->
 <section class="sport-quarter" aria-labelledby="quarter-title">
     <div class="container">
@@ -2540,11 +2567,111 @@
         }
     }
 </style>
+<!-- ==<style> БЛОК С ВИДЕО ====== -->
 
+<style>
+    .video-section {
+        padding: 60px 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .video-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .video-headline {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-weight: 800;
+    }
+    
+    .video-player {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        margin-bottom: 30px;
+    }
+    
+    video {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .video-description {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .video-description h3 {
+        font-size: 1.8rem;
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+    
+    .video-description p {
+        font-size: 1.2rem;
+        color: #6c757d;
+        margin-bottom: 25px;
+    }
+    
+    .video-phone-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #27ae60;
+        color: white;
+        padding: 15px 35px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 600;
+        transition: all 0.3s;
+        box-shadow: 0 10px 20px rgba(39, 174, 96, 0.3);
+    }
+    
+    .video-phone-btn:hover {
+        background: #2ecc71;
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(46, 204, 113, 0.4);
+        color: white;
+    }
+    
+    .phone-hint {
+        display: block;
+        margin-top: 10px;
+        color: #95a5a6;
+        font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+        .video-headline {
+            font-size: 1.8rem;
+        }
+        
+        .video-description h3 {
+            font-size: 1.4rem;
+        }
+        
+        .video-phone-btn {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+        }
+    }
+</style>
+
+<!-- Подключите Font Awesome для иконок (вставьте в head) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
 </body>
 
 </html>
+
 
 
 
