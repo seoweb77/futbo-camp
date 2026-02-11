@@ -221,21 +221,270 @@
                 
                 <p class="hero-description">Профессиональные футбольные сборы для детей 7-15 лет в современном спортивном комплексе</p>     
                 
-                    <!-- Блок с телефоном -->
-                    <div class="phone-block hero-phone">
-                        <div class="phone-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="phone-info">
-                            <div class="phone-label">Звоните для консультации:</div>
-                            <a href="tel:+7 993 950 29 05" class="phone-number">8 993 950 29 05</a>
-                            <div class="phone-hours">Ежедневно 9:00-21:00</div>
-                        </div>
-                    </div>
+                   <!-- =============== РАЗДЕЛИТЕЛЬ "ФУТБОЛЬНАЯ АКАДЕМИЯ" =============== -->
+<section class="football-divider">
+    <!-- Футбольные мячи как декоративные элементы -->
+    <div class="divider-balls">
+        <div class="ball ball-1"></div>
+        <div class="ball ball-2"></div>
+        <div class="ball ball-3"></div>
+    </div>
+    
+    <div class="football-container">
+        <div class="football-content">
+            <span class="football-tag">⚽ ТОЛЬКО В ЭТОМ СЕЗОНЕ</span>
+            <h2 class="football-heading">Специальное предложение</h2>
+            <div class="football-price">
+                <span class="old-price">65 000 ₽</span>
+                <span class="new-price">49 900 ₽</span>
+                <span class="price-label">за смену</span>
+            </div>
+            
+            <div class="football-features">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>3 тренировки в день</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Мастер-классы от профи</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Проживание + питание</span>
                 </div>
             </div>
+            
+            <div class="football-phone-wrapper">
+                <a href="tel:+79939502905" class="football-phone-button">
+                    <i class="fas fa-futbol"></i>
+                    <span class="phone-large">8 993 950 29 05</span>
+                    <span class="phone-small">Уточнить место</span>
+                </a>
+                <p class="football-note">* Количество мест ограничено</p>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    .football-divider {
+        background: linear-gradient(145deg, #1a2634 0%, #2c3e50 100%);
+        padding: 100px 0;
+        margin: 60px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Футбольные мячи (декор) */
+    .divider-balls {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .ball {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: repeating-linear-gradient(45deg, 
+            #2c3e50 0px, 
+            #2c3e50 10px, 
+            white 10px, 
+            white 20px);
+        opacity: 0.05;
+        animation: rotate 20s linear infinite;
+    }
+
+    .ball-1 {
+        top: -30px;
+        left: -30px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .ball-2 {
+        bottom: -50px;
+        right: 50px;
+        width: 200px;
+        height: 200px;
+        animation-delay: -5s;
+    }
+
+    .ball-3 {
+        top: 50%;
+        right: -50px;
+        width: 180px;
+        height: 180px;
+        animation-delay: -10s;
+    }
+
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .football-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .football-content {
+        max-width: 600px;
+        color: white;
+    }
+
+    .football-tag {
+        display: inline-block;
+        background: #f1c40f;
+        color: #2c3e50;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .football-heading {
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        line-height: 1.2;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .football-price {
+        margin-bottom: 30px;
+    }
+
+    .old-price {
+        font-size: 1.5rem;
+        color: #95a5a6;
+        text-decoration: line-through;
+        margin-right: 15px;
+    }
+
+    .new-price {
+        font-size: 3rem;
+        color: #f1c40f;
+        font-weight: 900;
+        margin-right: 10px;
+    }
+
+    .price-label {
+        font-size: 1.2rem;
+        color: #ecf0f1;
+    }
+
+    .football-features {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 35px;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.1rem;
+    }
+
+    .feature-item i {
+        color: #2ecc71;
+        font-size: 1.2rem;
+    }
+
+    .football-phone-wrapper {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        padding: 25px;
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .football-phone-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        background: white;
+        color: #2c3e50;
+        padding: 8px 25px;
+        padding-right: 35px;
+        border-radius: 60px;
+        text-decoration: none;
+        transition: all 0.4s;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+
+    .football-phone-button:hover {
+        transform: translateY(-5px) scale(1.02);
+        background: #f1c40f;
+        box-shadow: 0 20px 40px rgba(241, 196, 15, 0.3);
+    }
+
+    .football-phone-button i {
+        font-size: 2rem;
+        color: #2c3e50;
+    }
+
+    .phone-large {
+        font-size: 1.8rem;
+        font-weight: 900;
+    }
+
+    .phone-small {
+        display: block;
+        font-size: 0.9rem;
+        color: #7f8c8d;
+        margin-top: 2px;
+    }
+
+    .football-phone-button:hover .phone-small {
+        color: #34495e;
+    }
+
+    .football-note {
+        margin-top: 15px;
+        color: #bdc3c7;
+        font-size: 0.9rem;
+        font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+        .football-divider {
+            padding: 60px 0;
+        }
+
+        .football-heading {
+            font-size: 2.2rem;
+        }
+
+        .new-price {
+            font-size: 2.2rem;
+        }
+
+        .phone-large {
+            font-size: 1.4rem;
+        }
+
+        .football-phone-button {
+            padding: 8px 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+</style>
+
 
     <!-- Спортивный квартал -->
 <section class="sport-quarter" aria-labelledby="quarter-title">
@@ -1509,6 +1758,7 @@
 </body>
 
 </html>
+
 
 
 
